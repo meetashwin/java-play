@@ -2,21 +2,21 @@ import java.util.*;
 
 public class GenericsPlay {
 	public static void main(String[] args) {
-		Integer[] i = new Integer[100];
-		Collection<Integer> coll = new ArrayList<Integer>();
+		Integer[] i = {10, 20, 30, 40, 50};
+		Collection<Integer> int_coll = new ArrayList<Integer>();
 
-		Collection<Integer> newcoll = new ArrayList<Integer>();
-		newcoll.add(10);
-		newcoll.add(20);
-		newcoll.add(30);
+		CollectionGenericsPlay.addArrayToCollection(i, int_coll);
 
-		CollectionGenericsPlay.printCollection(newcoll);
+		CollectionGenericsPlay.printCollection(int_coll);
+		CollectionGenericsPlay.printCollection(int_coll);
 	}
 }
 
 class CollectionGenericsPlay {
 	public static <T> void addArrayToCollection(T[] a, Collection<T> coll) {
-
+		for (T i : a) {
+			coll.add(i);
+		}
 	}
 
 	public static <T> void printCollection(Collection<T> coll) {
