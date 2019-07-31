@@ -22,17 +22,19 @@ public class LambdaPlay {
         Greeting greeting = (String nx) -> System.out.println("Hello " + nx);
 
         //Testing the lambda expression
-        System.out.println("Testing addition of 3 and 5: " + addition.operation(3,5));
+        System.out.println("Testing addition of 3 and 4: " + addition.operation(3,4));
         System.out.println("Testing multiply of 4 and 6: " + multiplication.operation(4,6));
 
         greeting.sayHello(name);
     }
 }
 
+@FunctionalInterface
 interface MathOperation {
     int operation(int a, int b);
 }
 
+@FunctionalInterface
 interface Greeting {
     void sayHello(String s);
 }
