@@ -17,3 +17,7 @@ Java 8 Stream interface introduces filter() method which can be used to filter o
 This condition should be specified as a predicate which the filter() method accepts as an argument.
 
 The java.util.function.Predicate interface defines an abstract method named test() that accepts an object of generic type T and returns a boolean.
+
+## SubArraySum.java
+
+Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.
